@@ -16,8 +16,6 @@
   </body>
 </template>
 
-</template>
-
 <script>
 
   export default {
@@ -41,6 +39,7 @@
         password: this.loginForm.password
         })
         .then(successResponse => {
+          console.log(successResponse.data)
           if (successResponse.data.code === 200) {
           // var data = this.loginForm
            _this.$store.commit('login', _this.loginForm)
